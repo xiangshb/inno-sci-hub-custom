@@ -1,12 +1,12 @@
 import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-router-dom';
-import { ScrollToTop } from '@/lib/scroll-to-top';
-import HomePage from '@/components/pages/HomePage';
-import InsightsPage from '@/components/pages/InsightsPage';
-import ResearchPlansPage from '@/components/pages/ResearchPlansPage';
-import AgentsPage from '@/components/pages/AgentsPage';
-import ToolsPage from '@/components/pages/ToolsPage';
-import KnowledgePage from '@/components/pages/KnowledgePage';
-import VisualizationsPage from '@/components/pages/VisualizationsPage';
+import { ScrollToTop } from '../lib/scroll-to-top';
+import HomePage from '../components/pages/HomePage';
+import InsightsPage from '../components/pages/InsightsPage';
+import ResearchPlansPage from '../components/pages/ResearchPlansPage';
+import AgentsPage from '../components/pages/AgentsPage';
+import ToolsPage from '../components/pages/ToolsPage';
+import KnowledgePage from '../components/pages/KnowledgePage';
+import VisualizationsPage from '../components/pages/VisualizationsPage';
 
 // Simple error page component to replace Wix error handler
 function ErrorPage() {

@@ -24,7 +24,15 @@ export default defineConfig({
           "@wix/wix-vibe-plugins/plugins-theme.css",
           "@/components/StaticRouter",
           "@/components/Router",
-          "@/components"
+          "@/components",
+          "@/lib/scroll-to-top",
+          "@/components/pages/HomePage",
+          "@/components/pages/InsightsPage",
+          "@/components/pages/ResearchPlansPage",
+          "@/components/pages/AgentsPage",
+          "@/components/pages/ToolsPage",
+          "@/components/pages/KnowledgePage",
+          "@/components/pages/VisualizationsPage"
         ]
       }
     }
