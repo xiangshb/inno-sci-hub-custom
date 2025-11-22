@@ -20,6 +20,7 @@ export default defineConfig({
           "@/styles/global.css",
           "@wix/seo/components",
           "@wix/seo/services",
+          "@wix/image-kit",
           "@wix/wix-vibe-plugins/plugins-vars.css",
           "@wix/wix-vibe-plugins/plugins-theme.css",
           "@/components/StaticRouter",
