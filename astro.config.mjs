@@ -69,6 +69,7 @@ export default defineConfig({
           "react-router-dom",
           "framer-motion",
           "lucide-react",
+          "react/jsx-dev-runtime",
           "@/components/ui/popover",
           "@/components/ui/progress",
           "@/components/ui/radio-group",
