@@ -8,9 +8,6 @@ const pageTitle = 'InnoSciHub - Scientific Discovery Platform';
 const pageDescription = 'A comprehensive platform for scientific research, insights, tools, and collaboration';
 const pageUrl = Astro.url.href;
 
-// Disable prerendering for dynamic routes
-export const prerender = false;
-
 // For static builds, we need to provide getStaticPaths
 export async function getStaticPaths() {
   return [
