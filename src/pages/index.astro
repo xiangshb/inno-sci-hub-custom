@@ -1,0 +1,23 @@
+---
+import { Head } from "@/components/Head";
+import StaticRouter from "@/components/StaticRouter";
+import "@/styles/global.css";
+
+// Static build version of the main page without Wix dependencies
+---
+
+<html lang="en" class="w-full h-full">
+  <head>
+    <Head />
+    <title>InnoSciHub - Scientific Discovery Platform</title>
+    <meta name="description" content="A platform for scientific discovery, research collaboration, and knowledge sharing" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <body class="w-full h-full">
+    <div id="root" class="w-full h-full">
+      <StaticRouter client:only="react" />
+    </div>
+  </body>
+</html>
