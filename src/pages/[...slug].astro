@@ -10,6 +10,18 @@ const pageUrl = Astro.url.href;
 
 // Disable prerendering for dynamic routes
 export const prerender = false;
+
+// For static builds, we need to provide getStaticPaths
+export async function getStaticPaths() {
+  return [
+    { params: { slug: ['insights'] } },
+    { params: { slug: ['research-plans'] } },
+    { params: { slug: ['agents'] } },
+    { params: { slug: ['tools'] } },
+    { params: { slug: ['knowledge'] } },
+    { params: { slug: ['visualizations'] } }
+  ];
+}
 ---
 
 <html lang="en" class="w-full h-full">
