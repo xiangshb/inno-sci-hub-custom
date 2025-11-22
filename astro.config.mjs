@@ -23,7 +23,8 @@ export default defineConfig({
           "@wix/wix-vibe-plugins/plugins-vars.css",
           "@wix/wix-vibe-plugins/plugins-theme.css",
           "@/components/StaticRouter",
-          "@/components/Router"
+          "@/components/Router",
+          "@/components"
         ]
       }
     }
