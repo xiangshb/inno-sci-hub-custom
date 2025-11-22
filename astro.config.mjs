@@ -16,7 +16,8 @@ export default defineConfig({
     build: {
       rollupOptions: {
         external: [
-          "@/components/Head"
+          "@/components/Head",
+          "@/styles/global.css"
         ]
       }
     }
