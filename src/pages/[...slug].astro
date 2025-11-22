@@ -7,6 +7,9 @@ import "../styles/global.css";
 const pageTitle = 'InnoSciHub - Scientific Discovery Platform';
 const pageDescription = 'A comprehensive platform for scientific research, insights, tools, and collaboration';
 const pageUrl = Astro.url.href;
+
+// Disable prerendering for dynamic routes
+export const prerender = false;
 ---
 
 <html lang="en" class="w-full h-full">
