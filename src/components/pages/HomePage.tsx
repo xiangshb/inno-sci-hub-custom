@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Brain, Network, Microscope, BarChart3, Lightbulb, Zap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Image } from '@/components/ui/image';
-import { MockDataService } from '@/services/mockDataService';
-import { ScientificInsights, ResearchPlans, IntelligentAgents } from '@/services/mockDataService';
+import { Button } from '../ui/button';
+import { Card } from '../ui/card';
+import { Image } from '../ui/image';
+import { MockDataService } from '../../services/mockDataService';
+import { ScientificInsights, ResearchPlans, IntelligentAgents } from '../../services/mockDataService';
 
 export default function HomePage() {
   const [insights, setInsights] = useState<ScientificInsights[]>([]);
