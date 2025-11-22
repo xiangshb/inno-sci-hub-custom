@@ -13,6 +13,13 @@ export default defineConfig({
   ],
   vite: {
     plugins: [],
+    build: {
+      rollupOptions: {
+        external: [
+          "@/components/Head"
+        ]
+      }
+    }
   },
   devToolbar: {
     enabled: false,
