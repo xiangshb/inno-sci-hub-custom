@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { BaseCrudService } from '@/integrations';
-import { ResearchPlans } from '@/entities';
+import { MockDataService } from '@/services/mockDataService';
+import { ResearchPlans } from '@/services/mockDataService';
 
 export default function ResearchPlansPage() {
   const [plans, setPlans] = useState<ResearchPlans[]>([]);
@@ -16,7 +16,7 @@ export default function ResearchPlansPage() {
   useEffect(() => {
     const fetchPlans = async () => {
       try {
-        const { items } = await BaseCrudService.getAll<ResearchPlans>('researchplans');
+        const { items } = await MockDataService.getAll<ResearchPlans>('researchplans');
         setPlans(items);
       } catch (error) {
         console.error('Error fetching research plans:', error);

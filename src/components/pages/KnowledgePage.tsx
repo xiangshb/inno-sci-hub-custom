@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { BaseCrudService } from '@/integrations';
-import { KnowledgeNetworkConcepts } from '@/entities';
+import { MockDataService } from '@/services/mockDataService';
+import { KnowledgeNetworkConcepts } from '@/services/mockDataService';
 
 export default function KnowledgePage() {
   const [concepts, setConcepts] = useState<KnowledgeNetworkConcepts[]>([]);
@@ -18,7 +18,7 @@ export default function KnowledgePage() {
   useEffect(() => {
     const fetchConcepts = async () => {
       try {
-        const { items } = await BaseCrudService.getAll<KnowledgeNetworkConcepts>('knowledgenetworkconcepts');
+        const { items } = await MockDataService.getAll<KnowledgeNetworkConcepts>('knowledgenetworkconcepts');
         setConcepts(items);
         setFilteredConcepts(items);
       } catch (error) {

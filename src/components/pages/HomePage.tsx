@@ -5,8 +5,8 @@ import { Brain, Network, Microscope, BarChart3, Lightbulb, Zap } from 'lucide-re
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
-import { BaseCrudService } from '@/integrations';
-import { ScientificInsights, ResearchPlans, IntelligentAgents } from '@/entities';
+import { MockDataService } from '@/services/mockDataService';
+import { ScientificInsights, ResearchPlans, IntelligentAgents } from '@/services/mockDataService';
 
 export default function HomePage() {
   const [insights, setInsights] = useState<ScientificInsights[]>([]);
@@ -17,9 +17,9 @@ export default function HomePage() {
     const fetchData = async () => {
       try {
         const [insightsData, plansData, agentsData] = await Promise.all([
-          BaseCrudService.getAll<ScientificInsights>('scientificinsights'),
-          BaseCrudService.getAll<ResearchPlans>('researchplans'),
-          BaseCrudService.getAll<IntelligentAgents>('intelligentagents')
+          MockDataService.getAll<ScientificInsights>('scientificinsights'),
+          MockDataService.getAll<ResearchPlans>('researchplans'),
+          MockDataService.getAll<IntelligentAgents>('intelligentagents')
         ]);
         
         setInsights(insightsData.items.slice(0, 3));

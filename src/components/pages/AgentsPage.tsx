@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Image } from '@/components/ui/image';
-import { BaseCrudService } from '@/integrations';
-import { IntelligentAgents } from '@/entities';
+import { MockDataService } from '@/services/mockDataService';
+import { IntelligentAgents } from '@/services/mockDataService';
 
 export default function AgentsPage() {
   const [agents, setAgents] = useState<IntelligentAgents[]>([]);
@@ -16,7 +16,7 @@ export default function AgentsPage() {
   useEffect(() => {
     const fetchAgents = async () => {
       try {
-        const { items } = await BaseCrudService.getAll<IntelligentAgents>('intelligentagents');
+        const { items } = await MockDataService.getAll<IntelligentAgents>('intelligentagents');
         setAgents(items);
       } catch (error) {
         console.error('Error fetching agents:', error);

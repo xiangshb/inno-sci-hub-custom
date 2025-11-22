@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { BaseCrudService } from '@/integrations';
-import { ScientificInsights } from '@/entities';
+import { MockDataService } from '@/services/mockDataService';
+import { ScientificInsights } from '@/services/mockDataService';
 
 export default function InsightsPage() {
   const [insights, setInsights] = useState<ScientificInsights[]>([]);
@@ -18,7 +18,7 @@ export default function InsightsPage() {
   useEffect(() => {
     const fetchInsights = async () => {
       try {
-        const { items } = await BaseCrudService.getAll<ScientificInsights>('scientificinsights');
+        const { items } = await MockDataService.getAll<ScientificInsights>('scientificinsights');
         setInsights(items);
         setFilteredInsights(items);
       } catch (error) {

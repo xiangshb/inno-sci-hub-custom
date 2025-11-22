@@ -7,8 +7,8 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Image } from '@/components/ui/image';
-import { BaseCrudService } from '@/integrations';
-import { VisualizationAnalysis } from '@/entities';
+import { MockDataService } from '@/services/mockDataService';
+import { VisualizationAnalysis } from '@/services/mockDataService';
 
 export default function VisualizationsPage() {
   const [visualizations, setVisualizations] = useState<VisualizationAnalysis[]>([]);
@@ -18,7 +18,7 @@ export default function VisualizationsPage() {
   useEffect(() => {
     const fetchVisualizations = async () => {
       try {
-        const { items } = await BaseCrudService.getAll<VisualizationAnalysis>('visualizationanalysis');
+        const { items } = await MockDataService.getAll<VisualizationAnalysis>('visualizationanalysis');
         setVisualizations(items);
         setFilteredVisualizations(items);
       } catch (error) {

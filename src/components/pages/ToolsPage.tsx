@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import { BaseCrudService } from '@/integrations';
-import { IntelligentTools } from '@/entities';
+import { MockDataService } from '@/services/mockDataService';
+import { IntelligentTools } from '@/services/mockDataService';
 
 export default function ToolsPage() {
   const [tools, setTools] = useState<IntelligentTools[]>([]);
@@ -18,7 +18,7 @@ export default function ToolsPage() {
   useEffect(() => {
     const fetchTools = async () => {
       try {
-        const { items } = await BaseCrudService.getAll<IntelligentTools>('intelligenttools');
+        const { items } = await MockDataService.getAll<IntelligentTools>('intelligenttools');
         setTools(items);
         setFilteredTools(items);
       } catch (error) {
