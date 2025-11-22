@@ -18,7 +18,10 @@ export default defineConfig({
         external: [
           "@/components/Head",
           "@/styles/global.css",
-          "@wix/seo/components"
+          "@wix/seo/components",
+          "@wix/seo/services",
+          "@wix/wix-vibe-plugins/plugins-vars.css",
+          "@wix/wix-vibe-plugins/plugins-theme.css"
         ]
       }
     }
