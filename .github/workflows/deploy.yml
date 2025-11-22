@@ -26,13 +26,14 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: package-lock.json
           
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        
+      - name: Clean cache and modules
+        run: |
+          npm cache clean --force
+          rm -rf node_modules package-lock.json
+          
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps --timeout=600000
+        run: npm ci --legacy-peer-deps --no-cache
         
       - name: Build with Astro
         run: STATIC_BUILD=true npm run build:static
