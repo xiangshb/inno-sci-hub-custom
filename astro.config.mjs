@@ -17,7 +17,8 @@ export default defineConfig({
       rollupOptions: {
         external: [
           "@/components/Head",
-          "@/styles/global.css"
+          "@/styles/global.css",
+          "@wix/seo/components"
         ]
       }
     }
