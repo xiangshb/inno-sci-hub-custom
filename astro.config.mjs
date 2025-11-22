@@ -34,6 +34,7 @@ export default defineConfig({
           "@/components/pages/KnowledgePage",
           "@/components/pages/VisualizationsPage",
           "@/services/mockDataService",
+          "@/lib/utils",
           "@/components/ui/button",
           "@/components/ui/card",
           "@/components/ui/input",
