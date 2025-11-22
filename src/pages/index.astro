@@ -1,9 +1,9 @@
 ---
 import { Head } from "@/components/Head";
-import StaticRouter from "@/components/StaticRouter";
+import AppRouter from "@/components/StaticRouter";
 import "@/styles/global.css";
 
-// Static build version of the main page without Wix dependencies
+// Static build version of main page without Wix dependencies
 ---
 
 <html lang="en" class="w-full h-full">
@@ -17,7 +17,7 @@ import "@/styles/global.css";
   </head>
   <body class="w-full h-full">
     <div id="root" class="w-full h-full">
-      <StaticRouter client:only="react" />
+      <AppRouter client:only="react" />
     </div>
   </body>
 </html>
